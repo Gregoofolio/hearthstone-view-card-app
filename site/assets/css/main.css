@@ -354,63 +354,63 @@ th {
 
 @font-face {
   font-family: Mont;
-  src: url("/assets/fonts/Montserrat-Regular.otf"); }
+  src: url("../fonts/Montserrat-Regular.otf"); }
 
 @font-face {
   font-family: MontL;
-  src: url("/assets/fonts/Montserrat-Light.otf"); }
+  src: url("../fonts/Montserrat-Light.otf"); }
 
 @font-face {
   font-family: MontUL;
-  src: url("/assets/fonts/Montserrat-UltraLight.otf"); }
+  src: url("../fonts/Montserrat-UltraLight.otf"); }
 
 @font-face {
   font-family: MontB;
-  src: url("/assets/fonts/Montserrat-Bold.otf"); }
+  src: url("../fonts/Montserrat-Bold.otf"); }
 
 @font-face {
   font-family: MontEB;
-  src: url("/assets/fonts/Montserrat-ExtraBold.otf"); }
+  src: url("../fonts/Montserrat-ExtraBold.otf"); }
 
 @font-face {
   font-family: MontSB;
-  src: url("/assets/fonts/Montserrat-SemiBold.otf"); }
+  src: url("../fonts/Montserrat-SemiBold.otf"); }
 
 @font-face {
   font-family: Sweet;
-  src: url("/assets/fonts/Sweetly-Broken.ttf"); }
+  src: url("../fonts/Sweetly-Broken.ttf"); }
 
 @font-face {
   font-family: SweetSB;
-  src: url("/assets/fonts/Sweetly-Broken-SemiBold.ttf"); }
+  src: url("../fonts/Sweetly-Broken-SemiBold.ttf"); }
 
 @font-face {
   font-family: SweetB;
-  src: url("/assets/fonts/Sweetly-Broken-Bold.ttf"); }
+  src: url("../fonts/Sweetly-Broken-Bold.ttf"); }
 
 @font-face {
   font-family: Merr;
-  src: url("/assets/fonts/Merriweather-Regular.ttf"); }
+  src: url("../fonts/Merriweather-Regular.ttf"); }
 
 @font-face {
   font-family: MerrL;
-  src: url("/assets/fonts/Merriweather-Light.ttf"); }
+  src: url("../fonts/Merriweather-Light.ttf"); }
 
 @font-face {
   font-family: MerrI;
-  src: url("/assets/fonts/Merriweather-Italic.otf"); }
+  src: url("../fonts/Merriweather-Italic.otf"); }
 
 @font-face {
   font-family: MerrLI;
-  src: url("/assets/fonts/Merriweather-LightItalic.otf"); }
+  src: url("../fonts/Merriweather-LightItalic.otf"); }
 
 @font-face {
   font-family: MerrB;
-  src: url("/assets/fonts/Merriweather-Bold.ttf"); }
+  src: url("../fonts/Merriweather-Bold.ttf"); }
 
 @font-face {
   font-family: MerrUB;
-  src: url("/assets/fonts/Merriweather-UltraBold.ttf"); }
+  src: url("../fonts/Merriweather-UltraBold.ttf"); }
 
 body .basic-page {
   background: url("../images/bg.jpg") center center;
