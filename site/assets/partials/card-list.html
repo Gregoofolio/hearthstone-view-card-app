@@ -1,0 +1,73 @@
+<section class="card-list-section">
+	<div class="lists-container">
+		<div class="cards-box">
+			<h2 class="box-h2">Basic cards</h2>
+			<ul>
+				<li ng-repeat="card in cards.Basic | filter: query | orderBy: order">
+					<span>
+						<a href="#/cards/{{card.name}}">{{card.name}}</a>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div class="cards-box">
+			<h2 class="box-h2">Classic cards</h2>
+			<ul>
+				<li ng-repeat="card in cards.Classic | filter: query">
+					<span>
+						<a href="#/cards/{{card.name}}">{{card.name}}</a>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<!-- <div class="cards-box">
+			<h2 class="box-h2">GvG cards</h2>
+			<ul>
+				<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order">
+					<span><a href="#/cards/{{card.name}}">{{card.name}}</a></span>
+				</li>
+			</ul>
+		</div>
+		<div class="cards-box">
+			<h2 class="box-h2">Blackrock Mountain</h2>
+			<ul>
+				<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order">
+					<span><a href="#/cards/{{card.name}}">{{card.name}}</a></span>
+				</li>
+			</ul>
+		</div>
+		<div class="cards-box">
+			<h2 class="box-h2">Naxxramas</h2>
+			<ul>
+				<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order">
+					<span><a href="#/cards/{{card.name}}">{{card.name}}</a></span>
+				</li>
+			</ul>
+		</div>
+		<div class="cards-box">
+			<h2 class="box-h2">TGT cards</h2>
+			<ul>
+				<li ng-repeat="card in cards[ 'The Grand Tournament' ]  | filter: query | orderBy: order">
+					<span><a href="#/cards/{{card.name}}">{{card.name}}</a></span>
+				</li>
+			</ul>
+		</div> -->
+
+		<div class="graph-container">
+			<tower get-height="{{totalCardCost}}" class="tower"></tower>
+		</div>
+	</div>
+	
+	<form action="" >
+		Search: <input ng-model="query.name">
+	</form>
+	<h3>Order by:</h3>
+	<select ng-model="order">
+	  <option value="name">alphabetical</option>
+	  <option value="cardID">card Id</option>
+	  <option value="cost">cost</option>
+	</select>
+
+</section>
