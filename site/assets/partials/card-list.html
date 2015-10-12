@@ -1,49 +1,92 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo-brand" href="https://github.com/Gregoofolio"><div class="name-logo"></div></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/">See Random Card</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search for card" ng-model="query.name">
+        </div>
+      </form>
+      <label class="nav-label">Order by:</label>
+        <select select-bts ng-model="order">
+          <option value="name">Name</option>
+		  <option value="cost">Cost</option>
+		  <option value="attack">Attack</option>
+		  <option value="health">Health</option>
+		</select>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/card#naxxramas">Nax</a></li>
+        <li><a href="#/card#basic">Basic</a></li>
+        <li><a href="#/card#tgt">Tgt</a></li>
+        <li><a href="#/card#blackrock">Blackrock</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="logo"></div>
 <section class="card-list-section">
+
 	<div class="lists-container">
 		<div class="cards-box">
 			
 			<ul>
-				<h2 class="box-h2">Basic cards</h2>
+				<h2 class="box-h2" id="basic">Basic cards</h2>
 				<li ng-repeat="card in cards.Basic | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+					<div class="noise">
+						<a href="#/cards/{{card.name}}">{{card.name}} </a>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>	
+					
 				</li>
-				<h2 class="box-h2 middle-h2">Classic cards</h2>
+				<h2 class="box-h2 middle-h2" id="classic">Classic cards</h2>
 				<li ng-repeat="card in cards.Classic | filter: query" style="background:url({{card.img}});">
-					<span>
+					<div class="noise">
 						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
 				</li>
-				<h2 class="box-h2 middle-h2">GvG</h2>
+				<h2 class="box-h2 middle-h2" id="gvg">GvG</h2>
 				<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<span>
+					<div class="noise">
 						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
 				</li>
-				<h2 class="box-h2 middle-h2">Blackrock Mountain</h2>
+				<h2 class="box-h2 middle-h2" id="blackrock">Blackrock Mountain</h2>
 				<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<span>
+					<div class="noise">
 						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
 				</li>
-				<h2 class="box-h2 middle-h2">Naxxramas</h2>
+				<h2 class="box-h2 middle-h2" id="naxxramas">Naxxramas</h2>
 				<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<span>
+					<div class="noise">
 						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
 				</li>
-				<h2 class="box-h2 middle-h2">The Grand Tournament</h2>
+				<h2 class="box-h2 middle-h2" id="tgt">The Grand Tournament</h2>
 				<li ng-repeat="card in cards[ 'The Grand Tournament' ]  | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<span>
+					<div class="noise">
 						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
+						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+					</div>
 				</li>										
 			</ul>
 		</div>
@@ -167,25 +210,8 @@
 						</td>
 					</tr>
 				</tbody>
-
-				
-			</table>
-			
-				
-					
-				
 			</table>
 		</div>
 	</div>
 	
-	<form action="" >
-		Search: <input ng-model="query.name">
-	</form>
-	<h3>Order by:</h3>
-	<select ng-model="order">
-	  <option value="name">alphabetical</option>
-	  <option value="cardID">card Id</option>
-	  <option value="cost">cost</option>
-	</select>
-
 </section>

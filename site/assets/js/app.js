@@ -83,4 +83,16 @@
 		}
 	})
 
+	.directive('selectBts', function(){
+		return{
+			restrict: "EA",
+			scope: '@',
+			link: function(scope, element, attrs){
+				
+				selectBts = angular.element(element);
+				$(selectBts).selectpicker();
+			}
+		}
+	})
+
 }())

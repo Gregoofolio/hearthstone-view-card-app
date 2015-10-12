@@ -2,8 +2,8 @@
 	var CardsControllers = angular.module('CardsControllers', [])
 		
 	.controller("MainController", ["$scope","$http", function($scope, $http){
-		$scope.order = 'name';
-
+		
+		$scope.order = "name";
 		// 1. Getting data from api (with promise function below)
 		var onCardsComplete = function(response){
 			$scope.cards = response.data;
@@ -92,6 +92,7 @@
 			console.log("Array of health: "+ $scope.arrayOfHealth);
 			console.log("Array of names: "+ $scope.arrayOfNames);
 		}
+
 		// In this stage I have Arrays of names,health,attack and cost each card which was clicked. 
 		//2. END
 	}])

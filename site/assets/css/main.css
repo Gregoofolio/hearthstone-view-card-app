@@ -415,7 +415,6 @@ th {
 body .basic-page {
   background: url("../images/bg.jpg") center center;
   background-size: 100% auto;
-  padding-top: 50px;
   padding-bottom: 200px;
   min-height: 100vh;
   position: relative; }
@@ -426,6 +425,36 @@ body .basic-page {
     background: url("../images/logo.png") center center;
     background-size: cover;
     margin: 0 auto 50px; }
+
+nav {
+  height: 55px;
+  background-color: #E7AB17 !important;
+  border-bottom: 1px solid #6b2f17 !important; }
+  nav .navbar-header .logo-brand {
+    padding: 5px;
+    margin-right: 10px; }
+    nav .navbar-header .logo-brand .name-logo {
+      width: 40px;
+      height: 40px;
+      background: url("../images/logo-GK.png");
+      background-size: cover; }
+  nav .navbar-nav a {
+    font-family: Mont;
+    font-size: 18px;
+    color: #333 !important; }
+    nav .navbar-nav a:hover {
+      color: #265a6d !important; }
+  nav .form-control {
+    margin-top: 2px; }
+  nav .nav-label {
+    font-family: MontL;
+    font-size: 18px;
+    color: #333;
+    line-height: 50px;
+    margin-left: 20px;
+    margin-right: 10px; }
+  nav .bootstrap-select {
+    margin-top: -4px; }
 
 .card-list-section .lists-container {
   margin-left: 50px;
@@ -455,7 +484,7 @@ body .basic-page {
       padding-left: 0; }
       .card-list-section .lists-container .cards-box ul .box-h2 {
         display: block;
-        width: 223px;
+        width: 233px;
         text-align: center;
         font-familt: MontSB;
         font-size: 20px;
@@ -473,21 +502,25 @@ body .basic-page {
       .card-list-section .lists-container .cards-box ul li {
         background-size: 122% auto !important;
         background-position: 50% 28% !important;
-        padding-left: 10px;
         border-bottom: 1px solid #999; }
-        .card-list-section .lists-container .cards-box ul li span a {
-          font-family: Mont;
-          font-size: 14px;
-          color: #DEE8ED;
-          text-decoration: none;
-          text-shadow: 2px 2px #333;
-          line-height: 27px; }
-          .card-list-section .lists-container .cards-box ul li span a:hover {
-            color: #999;
-            text-shadow: 2px 2px #333; }
-        .card-list-section .lists-container .cards-box ul li span .btn-plus {
-          padding: 3px 5px 5px;
-          float: right; }
+        .card-list-section .lists-container .cards-box ul li .noise {
+          background: url("../images/noise2.png");
+          width: 100%; }
+          .card-list-section .lists-container .cards-box ul li .noise a {
+            font-family: Mont;
+            font-size: 14px;
+            position: relative;
+            padding-left: 10px;
+            color: white;
+            text-decoration: none;
+            text-shadow: 2px 2px black;
+            line-height: 27px; }
+            .card-list-section .lists-container .cards-box ul li .noise a:hover {
+              color: #999;
+              text-shadow: 2px 2px #333; }
+          .card-list-section .lists-container .cards-box ul li .noise .btn-plus {
+            padding: 3px 5px 5px;
+            float: right; }
   .card-list-section .lists-container .graph-container {
     width: 400px;
     height: 400px;
