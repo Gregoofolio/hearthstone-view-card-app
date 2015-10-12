@@ -428,6 +428,7 @@ body .basic-page {
     margin: 0 auto 50px; }
 
 .card-list-section .lists-container {
+  margin-left: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -440,41 +441,53 @@ body .basic-page {
   position: relative; }
   .card-list-section .lists-container .cards-box {
     position: relative;
-    width: 240px;
+    width: 250px;
     display: block;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     border: 2px solid #333;
     overflow-y: scroll;
     background: url("../images/wood.png") center center;
     background-size: cover;
-    max-height: 400px; }
-    .card-list-section .lists-container .cards-box .box-h2 {
-      display: block;
-      width: 223px;
-      text-align: center;
-      font-familt: MontSB;
-      font-size: 20px;
-      color: #265a6d;
-      line-height: 40px;
-      margin: 0;
-      border-top-left-radius: 20px;
-      border-bottom: 2px solid #6b2f17;
-      background: url("../images/wood-dark.png") center center;
-      background-size: 100% auto; }
+    max-height: 400px;
+    overflow-x: hidden; }
     .card-list-section .lists-container .cards-box ul {
       list-style-type: none;
-      padding-left: 10px; }
-      .card-list-section .lists-container .cards-box ul li span a {
-        font-family: Monospace;
-        font-size: 16px;
-        color: #6b2f17;
-        text-decoration: none;
-        line-height: 27px; }
-        .card-list-section .lists-container .cards-box ul li span a:hover {
-          color: #265a6d; }
-      .card-list-section .lists-container .cards-box ul li span .btn-plus {
-        padding: 3px 5px 5px;
-        float: right; }
+      padding-left: 0; }
+      .card-list-section .lists-container .cards-box ul .box-h2 {
+        display: block;
+        width: 223px;
+        text-align: center;
+        font-familt: MontSB;
+        font-size: 20px;
+        color: #265a6d;
+        line-height: 40px;
+        margin: 0;
+        border-top-left-radius: 20px;
+        border-bottom: 2px solid #6b2f17;
+        background: url("../images/wood-dark.png") center center;
+        background-size: 100% auto; }
+        .card-list-section .lists-container .cards-box ul .box-h2.middle-h2 {
+          border-top: 2px solid #6b2f17;
+          border-top-left-radius: 0;
+          margin: 5px 0; }
+      .card-list-section .lists-container .cards-box ul li {
+        background-size: 122% auto !important;
+        background-position: 50% 28% !important;
+        padding-left: 10px;
+        border-bottom: 1px solid #999; }
+        .card-list-section .lists-container .cards-box ul li span a {
+          font-family: Mont;
+          font-size: 14px;
+          color: #DEE8ED;
+          text-decoration: none;
+          text-shadow: 2px 2px #333;
+          line-height: 27px; }
+          .card-list-section .lists-container .cards-box ul li span a:hover {
+            color: #999;
+            text-shadow: 2px 2px #333; }
+        .card-list-section .lists-container .cards-box ul li span .btn-plus {
+          padding: 3px 5px 5px;
+          float: right; }
   .card-list-section .lists-container .graph-container {
     width: 400px;
     height: 400px;
@@ -493,8 +506,9 @@ body .basic-page {
         -ms-flex-pack: distribute;
             justify-content: space-around; }
     .card-list-section .lists-container .graph-container .tower {
-      width: 30px;
-      height: 100px;
+      width: 20px;
+      height: 10px;
+      max-height: 390px;
       background-color: grey;
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
@@ -503,6 +517,13 @@ body .basic-page {
               transition: all 0.5s ease-in-out; }
       .card-list-section .lists-container .graph-container .tower.bigger {
         height: 200px; }
+  .card-list-section .lists-container .added-cards-table {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    margin-left: 50px; }
+    .card-list-section .lists-container .added-cards-table tr .td-name {
+      width: 200px; }
 
 .detail-section .frame {
   display: -webkit-box;

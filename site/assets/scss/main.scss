@@ -2,70 +2,70 @@
 
 @font-face {
     font-family: Mont;
-    src: url("/assets/fonts/Montserrat-Regular.otf");
+    src: url("../fonts/Montserrat-Regular.otf");
 }
 @font-face {
     font-family: MontL;
-    src: url("/assets/fonts/Montserrat-Light.otf");
+    src: url("../fonts/Montserrat-Light.otf");
 }
 @font-face {
     font-family: MontUL;
-    src: url("/assets/fonts/Montserrat-UltraLight.otf");
+    src: url("../fonts/Montserrat-UltraLight.otf");
 }
 @font-face {
     font-family: MontB;
-    src: url("/assets/fonts/Montserrat-Bold.otf");
+    src: url("../fonts/Montserrat-Bold.otf");
 }
 @font-face {
     font-family: MontEB;
-    src: url("/assets/fonts/Montserrat-ExtraBold.otf");
+    src: url("../fonts/Montserrat-ExtraBold.otf");
 }
 @font-face {
     font-family: MontSB;
-    src: url("/assets/fonts/Montserrat-SemiBold.otf");
+    src: url("../fonts/Montserrat-SemiBold.otf");
 }
 @font-face {
     font-family: Sweet;
-    src: url("/assets/fonts/Sweetly-Broken.ttf");
+    src: url("../fonts/Sweetly-Broken.ttf");
 }
 @font-face {
     font-family: SweetSB;
-    src: url("/assets/fonts/Sweetly-Broken-SemiBold.ttf");
+    src: url("../fonts/Sweetly-Broken-SemiBold.ttf");
 }
 @font-face {
     font-family: SweetB;
-    src: url("/assets/fonts/Sweetly-Broken-Bold.ttf");
+    src: url("../fonts/Sweetly-Broken-Bold.ttf");
 }
 @font-face {
     font-family: Merr;
-    src: url("/assets/fonts/Merriweather-Regular.ttf");
+    src: url("../fonts/Merriweather-Regular.ttf");
 }
 @font-face {
     font-family: MerrL;
-    src: url("/assets/fonts/Merriweather-Light.ttf");
+    src: url("../fonts/Merriweather-Light.ttf");
 }
 @font-face {
     font-family: MerrI;
-    src: url("/assets/fonts/Merriweather-Italic.otf");
+    src: url("../fonts/Merriweather-Italic.otf");
 }
 @font-face {
     font-family: MerrLI;
-    src: url("/assets/fonts/Merriweather-LightItalic.otf");
+    src: url("../fonts/Merriweather-LightItalic.otf");
 }
 @font-face {
     font-family: MerrB;
-    src: url("/assets/fonts/Merriweather-Bold.ttf");
+    src: url("../fonts/Merriweather-Bold.ttf");
 }
 @font-face {
     font-family: MerrUB;
-    src: url("/assets/fonts/Merriweather-UltraBold.ttf");
+    src: url("../fonts/Merriweather-UltraBold.ttf");
 }
 $brown: #6b2f17;
 $blue: #265a6d;
 
 body{
 	.basic-page{
-		background: url("/assets/images/bg.jpg") center center;
+		background: url("../images/bg.jpg") center center;
 		background-size: 100% auto;
 		padding-top: 50px;
 		padding-bottom: 200px;
@@ -75,7 +75,7 @@ body{
 			display: block;
 			width:506px;
 			height: 198px;
-			background: url("/assets/images/logo.png") center center;
+			background: url("../images/logo.png") center center;
 			background-size: cover;
 			margin:0 auto 50px;
 		}
@@ -86,54 +86,70 @@ body{
 
 .card-list-section{
 	.lists-container{
+		margin-left: 50px;
 		display: flex;
 		flex-direction: row;
 		
 		position: relative;
+
 		.cards-box{
 			position: relative;
-			width:240px;
+			width:250px;
 			display: block;
-			border-radius: 20px;
+			border-radius: 20px 0 0 20px;
 			border: 2px solid #333;
 			overflow-y: scroll;
-			background: url("/assets/images/wood.png") center center;
+			background: url("../images/wood.png") center center;
 			background-size: cover;
 			max-height:400px;
+			overflow-x: hidden;
 
-			.box-h2{
-				display: block;
-				width:223px;
-				
-				text-align: center;
-				font:{
-					familt:MontSB;
-					size:20px;
-				}
-				color: $blue;
-				line-height: 40px;
-				margin: 0;
-				border-top-left-radius:20px;
-				border-bottom:2px solid $brown;
-				background: url("/assets/images/wood-dark.png") center center;
-				background-size: 100% auto;
 
-			}
 			ul{	
 				list-style-type: none;
-				padding-left: 10px;
+				padding-left:0;
 				
-				li{
+				.box-h2{
+					display: block;
+					width:223px;
+					text-align: center;
+					font:{
+						familt:MontSB;
+						size:20px;
+					}
+					color: $blue;
+					line-height: 40px;
+					margin: 0;
+					border-top-left-radius:20px;
+					border-bottom:2px solid $brown;
+					background: url("../images/wood-dark.png") center center;
+					background-size: 100% auto;
+					&.middle-h2{
+						border-top:2px solid $brown;
+						border-top-left-radius:0;
+						margin: 5px 0;
+					}
+
+				}
+				
+				li{ 
+					background-size: 122% auto !important;
+					background-position: 50% 28% !important;
+					padding-left: 10px;
+					border-bottom:1px solid #999;
+
 					span{
 						a{
 							font:{
-								family:Monospace;
-								size:16px;
+								family:Mont;
+								size:14px;
 							}
-							color: $brown;
+							color: #DEE8ED;
 							text-decoration: none;
+							text-shadow: 2px 2px #333;
 							&:hover{
-								color: $blue;
+								color: #999;
+								text-shadow: 2px 2px #333;
 							}
 							line-height: 27px;
 
@@ -154,18 +170,34 @@ body{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
+			
 
 			.tower{
-				width:30px;
-				height: 100px;
+				width:20px;
+				height: 10px;
+				max-height:390px;
 				background-color: grey;
 				align-self: flex-end;
 				transition: all 0.5s ease-in-out;
+
 
 				&.bigger{
 					height: 200px;
 				}
 			}
+		}
+		.added-cards-table{
+			width:400px;
+			height: 400px;
+			background-color: lightblue;
+			margin-left: 50px;
+			tr{
+				.td-name{
+					width:200px;
+				}	
+			}
+
+
 		}
 	}
 
@@ -182,7 +214,7 @@ body{
 		justify-content: space-between;
 		width:960px;
 		height: 500px;
-		background: url("/assets/images/frame.png") center center;
+		background: url("../images/frame.png") center center;
 		background-size: cover;
 		margin: 0 auto;
 		.column-image{
@@ -291,17 +323,17 @@ body{
 						}
 						
 						&.icon-cost{
-							background: url("/assets/images/cost.png") center center;
+							background: url("../images/cost.png") center center;
 
 						}
 						&.icon-attack{
-							background: url("/assets/images/attack.png") center center;
+							background: url("../images/attack.png") center center;
 							.icon-quantity{
 								margin-top: 8px;
 							}						
 						}
 						&.icon-health{
-							background: url("/assets/images/health.png") center center;		
+							background: url("../images/health.png") center center;		
 							.icon-quantity{
 								margin-top: 11px;
 							}					
