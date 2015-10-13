@@ -6,7 +6,8 @@ Notice this isn't final version of app.
 Currently Done:
   - get data from hearthstone api (http://hearthstoneapi.com/),
   - added ngRoute to redirect to basic page, and page with each card details,
-  - show details from each card on individual url
+  - show details from each card on individual url,
+  - added button to see random card details
   
 ToDo:
 
