@@ -1,6 +1,6 @@
 (function(){
 	// APP
-	var app = angular.module("App", ['ngRoute', 'CardsControllers','cardDirectives']);
+	var app = angular.module("App", ['ngRoute', 'CardsControllers','cardDirectives', 'CardsFactory']);
 
 	// app CONFIG
 	app.config(['$routeProvider', function($routeProvider) {

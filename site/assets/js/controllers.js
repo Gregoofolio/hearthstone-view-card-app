@@ -1,7 +1,7 @@
 // Controllers START
-	var CardsControllers = angular.module('CardsControllers', [])
+	var CardsControllers = angular.module('CardsControllers', ['CardsFactory'])
 		
-	.controller("MainController", ["$scope","$http", function($scope, $http){
+	.controller("MainController", ["$scope","$http","randomCardDetail",  function($scope, $http, randomCardDetail){
 		
 		$scope.order = "name";
 		// 1. Getting data from api (with promise function below)
@@ -88,14 +88,22 @@
 			//adding each card name to array of names
 			$scope.arrayOfNames.push($scope.cardName);
 
-			console.log("Array of attack: "+ $scope.arrayOfAttack);
-			console.log("Array of health: "+ $scope.arrayOfHealth);
-			console.log("Array of names: "+ $scope.arrayOfNames);
 		}
+
 
 		// In this stage I have Arrays of names,health,attack and cost each card which was clicked. 
 		//2. END
+
+		//3. Invoge metchod getRandomName from factory "randomCardDetail" with argument $scope.cards (data from api);
+		$scope.getRandomName = function(){
+				return $scope.randomName = randomCardDetail.getRandomName($scope.cards);
+		}
+		
+
 	}])
+
+
+
 
 
 	.controller("DetailController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http ){
@@ -111,7 +119,6 @@
 			headers: {"X-Mashape-Key" : "Sr23tp9tKMmshNC9Z95JlAtkBSiZp1Sngwfjsn0sCxw2GVrr5g"}
 		})
 				.then(onDetailComplete);
-		
 	}]);
 	
 	

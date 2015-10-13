@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#/">Home</a></li>
-        <li><a href="#/">See Random Card</a></li>
+        <li><a href="#/cards/{{randomName}}" ng-click="getRandomName()">See Random Card</a></li>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -30,10 +30,7 @@
 		  <option value="health">Health</option>
 		</select>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/card#naxxramas">Nax</a></li>
-        <li><a href="#/card#basic">Basic</a></li>
-        <li><a href="#/card#tgt">Tgt</a></li>
-        <li><a href="#/card#blackrock">Blackrock</a></li>
+        <li><a href="http://www.grzegorzkyc.pl">My WebPage [pl]</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -90,61 +87,6 @@
 				</li>										
 			</ul>
 		</div>
-<!-- 		<div class="cards-box">
-			<h2 class="box-h2">Classic cards</h2>
-			<ul>
-				<li ng-repeat="card in cards.Classic | filter: query">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
-				</li>
-			</ul>
-		</div>
-		<div class="cards-box">
-			<h2 class="box-h2">GvG cards</h2>
-			<ul>
-				<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
-				</li>
-			</ul>
-		</div>
-		<div class="cards-box">
-			<h2 class="box-h2">Blackrock Mountain</h2>
-			<ul>
-				<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
-				</li>
-			</ul>
-		</div>
-		<div class="cards-box">
-			<h2 class="box-h2">Naxxramas</h2>
-			<ul>
-				<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
-				</li>
-			</ul>
-		</div>
-		<div class="cards-box">
-			<h2 class="box-h2">TGT cards</h2>
-			<ul>
-				<li ng-repeat="card in cards[ 'The Grand Tournament' ]  | filter: query | orderBy: order">
-					<span>
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></button>
-					</span>
-				</li>
-			</ul>
-		</div> -->
 
 		<div tower  get-zero="{{numberOf0}}" 
 					get-one="{{numberOf1}}"
