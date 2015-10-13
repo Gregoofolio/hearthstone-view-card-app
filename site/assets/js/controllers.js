@@ -1,23 +1,24 @@
 // Controllers START
 	var CardsControllers = angular.module('CardsControllers', ['CardsFactory'])
 		
-	.controller("MainController", ["$scope","$http","randomCardDetail",  function($scope, $http, randomCardDetail){
+	.controller("MainController", ["$scope","$http","randomCardDetail","getData",  function($scope, $http, randomCardDetail, getData){
 		
 		$scope.order = "name";
+
+
 		// 1. Getting data from api (with promise function below)
 		var onCardsComplete = function(response){
 			$scope.cards = response.data;
 		};
-	
-		$http.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards?collectible=1', {
-			headers: {"X-Mashape-Key" : "Sr23tp9tKMmshNC9Z95JlAtkBSiZp1Sngwfjsn0sCxw2GVrr5g"}
-		})
-				.then(onCardsComplete);
+		
+		getData.getApi().then(onCardsComplete);
 		// 1. END
+			
+
+
 				
 		//2. Counting in list of added cards (arrayOfCost) how may times each cost appears
 			// vars
-
 		$scope.totalCardCost = 0;
 		$scope.arrayOfCost = [];
 		$scope.arrayOfNames = [];
@@ -34,6 +35,10 @@
 		$scope.numberOf8 = 0;
 		$scope.numberOf9 = 0;
 
+
+		//on plus-button click get card from ng-repeat and send its data via function addToList.
+		$scope.addToList = function(card) {
+
 			// function counting how many times each cost apeears in arrayOfCosts
 			function countInArray(array, what){
 				var count = 0;
@@ -44,8 +49,6 @@
 				}
 				return count;
 			}
-		//on plus-button click get card from ng-repeat and send its data via function addToList.
-		$scope.addToList = function(card) {
 
 			$scope.cost = card.cost;
 			$scope.attack = card.attack;
@@ -106,19 +109,13 @@
 
 
 
-	.controller("DetailController", ["$scope","$routeParams","$http", function ($scope, $routeParams, $http ){
-
-		$scope.name = $routeParams.name;
+	.controller("DetailController", ["$scope","getData", function ($scope, getData ){
 
 		var onDetailComplete = function(response){
 			$scope.details = response.data;
 		};
 
-
-		$http.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/'+ $scope.name +'?collectible=1', {
-			headers: {"X-Mashape-Key" : "Sr23tp9tKMmshNC9Z95JlAtkBSiZp1Sngwfjsn0sCxw2GVrr5g"}
-		})
-				.then(onDetailComplete);
+		getData.getApiDetail().then(onDetailComplete);
 	}]);
 	
 	

@@ -1,6 +1,27 @@
 var CardsFactory = angular.module('CardsFactory', []);
 
-CardsFactory.factory('randomCardDetail', function(){
+CardsFactory.factory('getData', function($http, $routeParams){
+
+	var getApi = function(){
+		return $http.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards?collectible=1', {
+			headers: {"X-Mashape-Key" : "Sr23tp9tKMmshNC9Z95JlAtkBSiZp1Sngwfjsn0sCxw2GVrr5g"}
+		})
+	}
+	var getApiDetail = function(){
+
+		var name = $routeParams.name;
+		return 	$http.get('https://omgvamp-hearthstone-v1.p.mashape.com/cards/'+ name +'?collectible=1', {
+			headers: {"X-Mashape-Key" : "Sr23tp9tKMmshNC9Z95JlAtkBSiZp1Sngwfjsn0sCxw2GVrr5g"}
+		})
+	}
+	
+	return{
+		getApi: getApi,
+		getApiDetail: getApiDetail
+	}
+})
+
+.factory('randomCardDetail', function(){
 
 	var getRandomName = function(cards){
 
@@ -29,3 +50,4 @@ CardsFactory.factory('randomCardDetail', function(){
 		getRandomName: getRandomName
 	}
 })
+
