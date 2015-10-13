@@ -1,5 +1,5 @@
 # hearthstone-view-card-app
-Simple hearthstone app to show cards deatils based on AngularJS.
+Simple hearthstone app to show cards details based on AngularJS.
 
 Notice this isn't final version of app.
 
@@ -7,7 +7,7 @@ Currently Done:
   - get data from hearthstone api (http://hearthstoneapi.com/),
   - added ngRoute to redirect to basic page, and page with each card details,
   - show details from each card on individual url,
-  - added navbar with serach <input> and orderBy <select-option>
+  - added navbar with search <input> and orderBy <select-option>
   - added button to see random card details
   
 ToDo:
