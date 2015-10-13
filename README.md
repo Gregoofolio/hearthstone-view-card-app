@@ -7,6 +7,7 @@ Currently Done:
   - get data from hearthstone api (http://hearthstoneapi.com/),
   - added ngRoute to redirect to basic page, and page with each card details,
   - show details from each card on individual url,
+  - added navbar with serach <input> and orderBy <select-option>
   - added button to see random card details
   
 ToDo:
