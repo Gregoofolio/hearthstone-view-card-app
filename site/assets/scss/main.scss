@@ -129,7 +129,7 @@ nav{
 	height:100%;
 	.cards-belt-left,.cards-belt-right{
 		width:15%;
-		height: 90%;
+		height: 96%;
 		background-color: #eaeaea;
 		border-left: 1px solid $brown;
 		
@@ -212,140 +212,188 @@ nav{
 			height: 140px;
 			background: url("../images/logo.png") center center;
 			background-size: cover;
-			margin:20px auto 50px;
+			margin:20px auto 10px;
+		}
+		.main-container{
+			width:100%;
+			height: 700px;
+			
+			display: flex;
+			justify-content: space-between;
+			.content-wrapper{
+				width:700px;
+				
+				
+				margin-left: 40px;
+				.content-title{
+					font:{
+						family: MontSB;
+						size:3em;
+					}
+					color:white;
+					span{
+						color: $blue;
+						
+					}
+				}
+				.content-text, .content-ul{
+					font:{
+						family:MerrB;
+						size:1em;
+					}
+					color:white;
+					text-shadow: 1px 1px #999;
+					span{
+						color:#89160a;
+						text-shadow: none;
+					}
+				}
+				.graph-box{
+					width:600px;
+					height: 300px;
+					background: url("../images/graph-bg.jpg") center center;
+					background-size: cover;
+					margin:20px auto;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-around;
+					transition: all 0.5s ease-in-out;
+					padding-left: 30px;
+					padding-right: 30px;
+
+
+
+					.tower{
+						width: 15px;
+						height:2px;
+						background: linear-gradient(#31B0D5, #75C3D8, #A2CEDB);
+						align-self: flex-end;
+						margin-bottom: 8px;
+						transition: all 0.5s ease-in-out;
+
+
+					}
+				}
+
+
+			}
+			.list-wrapper{
+				width:400px;
+				height: 200px;
+				
+				.list{
+					width:300px;
+					height: 650px;
+					background: url("../images/list-frame.png");
+					margin: 0 auto;
+					padding-top: 14px;
+
+					.list-header{
+						height: 20px;
+						width:283px;
+						background: url("../images/wood-dark.png");
+						margin:0 auto;
+						display: flex;
+						justify-content: space-between;
+						.head{
+							text-align: center;
+							font:{
+								family:Merr;
+								size:12px;
+							}
+							color:$brown;
+							line-height: 20px;
+							.icon{
+								height:15px;
+								width:15px;
+								
+								margin:2px auto 0;
+								background-size: 100% auto;
+
+								&.icon-cost{
+									background:url("../images/cost-small.png") center center;
+								}
+								&.icon-attack{
+									background:url("../images/attack-small.png") center center;
+								}
+								&.icon-health{
+									background:url("../images/health-small.png") center center;
+								}
+							}
+						}
+						.head-lp{
+							width:8%;
+							margin:0;
+							text-align: center;
+
+							
+						}
+						.head-cost, .head-attack, .head-health{
+							margin:0;
+							width:10%;
+
+						}
+						.head-name{
+							margin:0;
+							width:62%;
+						}
+
+						
+					}
+					.list-body{
+						width:283px;
+						
+						margin:0 auto;
+						background-color: white;
+						display: flex;
+						.td-lp{
+							width:8%;
+							
+							
+						}
+						.td-name{
+							width:62%;
+							
+							
+						}
+						.td-cah{
+							width:10%;
+							
+							
+						}
+
+						ul{
+							list-style-type: none;
+							padding:0;
+							margin-bottom: 0;
+							&.lp-ul{
+								border-right: 1px solid $brown;
+								background: url("../images/wood.png");
+							}
+
+							li{
+								line-height: 20px;
+								font:{
+									family:Mont;
+									size:12px;
+								}
+								padding-left: 3px;
+								box-shadow: inset 0px 0.5px 1px 0px rgba(153,153,153,1);
+								&.name-li{
+									padding-left: 10px;
+								}
+								&.cah-li{
+									text-align: center;
+								}								
+							}
+						}
+					}
+				}
+
+			}
 		}
 	}
 }
-
-
-// .card-list-section{
-// 	.lists-container{
-// 		margin-left: 50px;
-// 		display: flex;
-// 		flex-direction: row;
-		
-// 		position: relative;
-
-// 		.cards-box{
-// 			position: relative;
-// 			width:250px;
-// 			display: block;
-// 			border-radius: 20px 0 0 20px;
-// 			border: 2px solid #333;
-// 			overflow-y: scroll;
-// 			background: url("../images/wood.png") center center;
-// 			background-size: cover;
-// 			max-height:400px;
-// 			overflow-x: hidden;
-
-
-// 			ul{	
-// 				list-style-type: none;
-// 				padding-left:0;
-				
-// 				.box-h2{
-// 					display: block;
-// 					width:233px;
-// 					text-align: center;
-// 					font:{
-// 						familt:MontSB;
-// 						size:20px;
-// 					}
-// 					color: $blue;
-// 					line-height: 40px;
-// 					margin: 0;
-// 					border-top-left-radius:20px;
-// 					border-bottom:2px solid $brown;
-// 					background: url("../images/wood-dark.png") center center;
-// 					background-size: 100% auto;
-// 					&.middle-h2{
-// 						border-top:2px solid $brown;
-// 						border-top-left-radius:0;
-// 						margin: 5px 0;
-// 					}
-
-// 				}
-				
-// 				li{ 
-// 					background-size: 122% auto !important;
-// 					background-position: 50% 28% !important;
-					
-// 					border-bottom:1px solid #999;
-// 					.noise{
-// 						background: url("../images/noise2.png");
-// 						width:100%;
-// 						a{	
-// 							font:{
-// 								family:Mont;
-// 								size:14px;
-// 							}
-// 							position: relative;
-// 							padding-left: 10px;
-// 							color: white;
-// 							text-decoration: none;
-// 							text-shadow: 2px 2px black;
-// 							line-height: 27px;
-
-// 							&:hover{
-// 								color: #999;
-// 								text-shadow: 2px 2px #333;
-// 							}
-							
-
-// 						}
-// 						.btn-plus{
-// 							padding:3px 5px 5px;
-// 							float:right;
-// 						}
-// 					}
-
-					
-// 				}
-// 			}
-// 		}
-// 		.graph-container{
-// 			width:400px;
-// 			height: 400px;
-// 			background-color: pink;
-// 			margin-left: 50px;
-// 			display: flex;
-// 			flex-direction: row;
-// 			justify-content: space-around;
-			
-
-// 			.tower{
-// 				width:20px;
-// 				height: 10px;
-// 				max-height:390px;
-// 				background-color: grey;
-// 				align-self: flex-end;
-// 				transition: all 0.5s ease-in-out;
-
-
-// 				&.bigger{
-// 					height: 200px;
-// 				}
-// 			}
-// 		}
-// 		.added-cards-table{
-// 			width:400px;
-// 			height: 400px;
-// 			background-color: lightblue;
-// 			margin-left: 50px;
-// 			tr{
-// 				.td-name{
-// 					width:200px;
-// 				}	
-// 			}
-
-
-// 		}
-// 	}
-
-// }
-
-
-
 
 
 

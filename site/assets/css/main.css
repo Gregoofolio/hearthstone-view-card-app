@@ -464,7 +464,7 @@ nav {
   height: 100%; }
   .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
     width: 15%;
-    height: 90%;
+    height: 96%;
     background-color: #eaeaea;
     border-left: 1px solid #6b2f17; }
     .home-page .cards-belt-left .category-box, .home-page .cards-belt-right .category-box, .detail-section .cards-belt-left .category-box, .detail-section .cards-belt-right .category-box {
@@ -523,7 +523,148 @@ nav {
       height: 140px;
       background: url("../images/logo.png") center center;
       background-size: cover;
-      margin: 20px auto 50px; }
+      margin: 20px auto 10px; }
+    .home-page .page-wrapper .main-container, .detail-section .page-wrapper .main-container {
+      width: 100%;
+      height: 700px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .home-page .page-wrapper .main-container .content-wrapper, .detail-section .page-wrapper .main-container .content-wrapper {
+        width: 700px;
+        margin-left: 40px; }
+        .home-page .page-wrapper .main-container .content-wrapper .content-title, .detail-section .page-wrapper .main-container .content-wrapper .content-title {
+          font-family: MontSB;
+          font-size: 3em;
+          color: white; }
+          .home-page .page-wrapper .main-container .content-wrapper .content-title span, .detail-section .page-wrapper .main-container .content-wrapper .content-title span {
+            color: #265a6d; }
+        .home-page .page-wrapper .main-container .content-wrapper .content-text, .home-page .page-wrapper .main-container .content-wrapper .content-ul, .detail-section .page-wrapper .main-container .content-wrapper .content-text, .detail-section .page-wrapper .main-container .content-wrapper .content-ul {
+          font-family: MerrB;
+          font-size: 1em;
+          color: white;
+          text-shadow: 1px 1px #999; }
+          .home-page .page-wrapper .main-container .content-wrapper .content-text span, .home-page .page-wrapper .main-container .content-wrapper .content-ul span, .detail-section .page-wrapper .main-container .content-wrapper .content-text span, .detail-section .page-wrapper .main-container .content-wrapper .content-ul span {
+            color: #89160a;
+            text-shadow: none; }
+        .home-page .page-wrapper .main-container .content-wrapper .graph-box, .detail-section .page-wrapper .main-container .content-wrapper .graph-box {
+          width: 600px;
+          height: 300px;
+          background: url("../images/graph-bg.jpg") center center;
+          background-size: cover;
+          margin: 20px auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+          -webkit-transition: all 0.5s ease-in-out;
+                  transition: all 0.5s ease-in-out;
+          padding-left: 30px;
+          padding-right: 30px; }
+          .home-page .page-wrapper .main-container .content-wrapper .graph-box .tower, .detail-section .page-wrapper .main-container .content-wrapper .graph-box .tower {
+            width: 15px;
+            height: 2px;
+            background: -webkit-linear-gradient(#31B0D5, #75C3D8, #A2CEDB);
+            background: linear-gradient(#31B0D5, #75C3D8, #A2CEDB);
+            -webkit-align-self: flex-end;
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
+            margin-bottom: 8px;
+            -webkit-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out; }
+      .home-page .page-wrapper .main-container .list-wrapper, .detail-section .page-wrapper .main-container .list-wrapper {
+        width: 400px;
+        height: 200px; }
+        .home-page .page-wrapper .main-container .list-wrapper .list, .detail-section .page-wrapper .main-container .list-wrapper .list {
+          width: 300px;
+          height: 650px;
+          background: url("../images/list-frame.png");
+          margin: 0 auto;
+          padding-top: 14px; }
+          .home-page .page-wrapper .main-container .list-wrapper .list .list-header, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header {
+            height: 20px;
+            width: 283px;
+            background: url("../images/wood-dark.png");
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head {
+              text-align: center;
+              font-family: Merr;
+              font-size: 12px;
+              color: #6b2f17;
+              line-height: 20px; }
+              .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head .icon, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head .icon {
+                height: 15px;
+                width: 15px;
+                margin: 2px auto 0;
+                background-size: 100% auto; }
+                .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-cost, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-cost {
+                  background: url("../images/cost-small.png") center center; }
+                .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-attack, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-attack {
+                  background: url("../images/attack-small.png") center center; }
+                .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-health, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head .icon.icon-health {
+                  background: url("../images/health-small.png") center center; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head-lp, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head-lp {
+              width: 8%;
+              margin: 0;
+              text-align: center; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head-cost, .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head-attack, .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head-health, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head-cost, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head-attack, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head-health {
+              margin: 0;
+              width: 10%; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-header .head-name, .detail-section .page-wrapper .main-container .list-wrapper .list .list-header .head-name {
+              margin: 0;
+              width: 62%; }
+          .home-page .page-wrapper .main-container .list-wrapper .list .list-body, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body {
+            width: 283px;
+            margin: 0 auto;
+            background-color: white;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-body .td-lp, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body .td-lp {
+              width: 8%; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-body .td-name, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body .td-name {
+              width: 62%; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-body .td-cah, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body .td-cah {
+              width: 10%; }
+            .home-page .page-wrapper .main-container .list-wrapper .list .list-body ul, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body ul {
+              list-style-type: none;
+              padding: 0;
+              margin-bottom: 0; }
+              .home-page .page-wrapper .main-container .list-wrapper .list .list-body ul.lp-ul, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body ul.lp-ul {
+                border-right: 1px solid #6b2f17;
+                background: url("../images/wood.png"); }
+              .home-page .page-wrapper .main-container .list-wrapper .list .list-body ul li, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body ul li {
+                line-height: 20px;
+                font-family: Mont;
+                font-size: 12px;
+                padding-left: 3px;
+                box-shadow: inset 0px 0.5px 1px 0px #999999; }
+                .home-page .page-wrapper .main-container .list-wrapper .list .list-body ul li.name-li, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body ul li.name-li {
+                  padding-left: 10px; }
+                .home-page .page-wrapper .main-container .list-wrapper .list .list-body ul li.cah-li, .detail-section .page-wrapper .main-container .list-wrapper .list .list-body ul li.cah-li {
+                  text-align: center; }
 
 .detail-section .frame {
   display: -webkit-box;

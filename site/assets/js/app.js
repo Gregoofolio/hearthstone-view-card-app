@@ -59,6 +59,9 @@
 				numberOf7: '@getSeven',
 				numberOf8: '@getEight',
 				numberOf9: '@getNine',
+				numberOf10: '@getTen',
+				numberOf11: '@getEleven',
+				numberOf12: '@getTwelve',
 
 			},
 			link: function(scope, element, attrs){
@@ -76,18 +79,24 @@
 				graph7 = tower.children()[7];
 				graph8 = tower.children()[8];
 				graph9 = tower.children()[9];
+				graph10 = tower.children()[10];
+				graph11 = tower.children()[11];
+				graph12 = tower.children()[12];
 
 				animateUp = function(){
-					$(graph0).css("height", scope.numberOf0*15 + 'px');
-					$(graph1).css("height", scope.numberOf1*15 + 'px');
-					$(graph2).css("height", scope.numberOf2*15 + 'px');
-					$(graph3).css("height", scope.numberOf3*15 + 'px');
-					$(graph4).css("height", scope.numberOf4*15 + 'px');
-					$(graph5).css("height", scope.numberOf5*15 + 'px');
-					$(graph6).css("height", scope.numberOf6*15 + 'px');
-					$(graph7).css("height", scope.numberOf7*15 + 'px');
-					$(graph8).css("height", scope.numberOf8*15 + 'px');
-					$(graph9).css("height", scope.numberOf9*15 + 'px');
+					$(graph0).css("height", scope.numberOf0*25 + 'px');
+					$(graph1).css("height", scope.numberOf1*25 + 'px');
+					$(graph2).css("height", scope.numberOf2*25 + 'px');
+					$(graph3).css("height", scope.numberOf3*25 + 'px');
+					$(graph4).css("height", scope.numberOf4*25 + 'px');
+					$(graph5).css("height", scope.numberOf5*25 + 'px');
+					$(graph6).css("height", scope.numberOf6*25 + 'px');
+					$(graph7).css("height", scope.numberOf7*25 + 'px');
+					$(graph8).css("height", scope.numberOf8*25 + 'px');
+					$(graph9).css("height", scope.numberOf9*25 + 'px');
+					$(graph10).css("height", scope.numberOf10*25 + 'px');
+					$(graph11).css("height", scope.numberOf11*25 + 'px');
+					$(graph12).css("height", scope.numberOf12*25 + 'px');
 				}
 
 				$(tower).on('mouseover', animateUp);

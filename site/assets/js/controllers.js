@@ -30,6 +30,9 @@
 		$scope.numberOf7 = 0;
 		$scope.numberOf8 = 0;
 		$scope.numberOf9 = 0;
+		$scope.numberOf10 = 0;
+		$scope.numberOf11 = 0;
+		$scope.numberOf12 = 0;
 
 		//on plus-button click get card from ng-repeat and send its data via function addToList.
 		$scope.addToList = function(card) {
@@ -70,6 +73,10 @@
 			$scope.numberOf7 = countInArray($scope.arrayOfCost, 7);
 			$scope.numberOf8 = countInArray($scope.arrayOfCost, 8);
 			$scope.numberOf9 = countInArray($scope.arrayOfCost, 9);
+			$scope.numberOf10 = countInArray($scope.arrayOfCost, 10);
+			$scope.numberOf11 = countInArray($scope.arrayOfCost, 11);
+			$scope.numberOf12 = countInArray($scope.arrayOfCost, 12);
+
 
 			//adding each card attack to array of attacks
 			if($scope.attack === undefined){
