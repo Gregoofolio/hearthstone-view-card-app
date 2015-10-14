@@ -418,18 +418,12 @@ body .basic-page {
   padding-bottom: 200px;
   min-height: 100vh;
   position: relative; }
-  body .basic-page .logo {
-    display: block;
-    width: 506px;
-    height: 198px;
-    background: url("../images/logo.png") center center;
-    background-size: cover;
-    margin: 0 auto 50px; }
 
 nav {
   height: 55px;
   background-color: #E7AB17 !important;
-  border-bottom: 1px solid #6b2f17 !important; }
+  border-bottom: 1px solid #6b2f17 !important;
+  margin-bottom: 0 !important; }
   nav .navbar-header .logo-brand {
     padding: 5px;
     margin-right: 10px; }
@@ -456,107 +450,80 @@ nav {
   nav .bootstrap-select {
     margin-top: -4px; }
 
-.card-list-section .lists-container {
-  margin-left: 50px;
+.home-page, .detail-section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative; }
-  .card-list-section .lists-container .cards-box {
-    position: relative;
-    width: 250px;
-    display: block;
-    border-radius: 20px 0 0 20px;
-    border: 2px solid #333;
-    overflow-y: scroll;
-    background: url("../images/wood.png") center center;
-    background-size: cover;
-    max-height: 400px;
-    overflow-x: hidden; }
-    .card-list-section .lists-container .cards-box ul {
-      list-style-type: none;
-      padding-left: 0; }
-      .card-list-section .lists-container .cards-box ul .box-h2 {
-        display: block;
-        width: 233px;
-        text-align: center;
-        font-familt: MontSB;
-        font-size: 20px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+  .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
+    width: 15%;
+    height: 90%;
+    background-color: #eaeaea;
+    border-left: 1px solid #6b2f17; }
+    .home-page .cards-belt-left .category-box, .home-page .cards-belt-right .category-box, .detail-section .cards-belt-left .category-box, .detail-section .cards-belt-right .category-box {
+      overflow-y: scroll;
+      height: 33.4%;
+      border-bottom: 1px solid white;
+      background: url(../images/wood.png); }
+      .home-page .cards-belt-left .category-box:last-child, .home-page .cards-belt-right .category-box:last-child, .detail-section .cards-belt-left .category-box:last-child, .detail-section .cards-belt-right .category-box:last-child {
+        border-bottom: none; }
+      .home-page .cards-belt-left .category-box .category-title, .home-page .cards-belt-right .category-box .category-title, .detail-section .cards-belt-left .category-box .category-title, .detail-section .cards-belt-right .category-box .category-title {
+        font-family: MerrB;
+        font-size: 1em;
         color: #265a6d;
-        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: red;
+        line-height: 2em;
         margin: 0;
-        border-top-left-radius: 20px;
-        border-bottom: 2px solid #6b2f17;
-        background: url("../images/wood-dark.png") center center;
-        background-size: 100% auto; }
-        .card-list-section .lists-container .cards-box ul .box-h2.middle-h2 {
-          border-top: 2px solid #6b2f17;
-          border-top-left-radius: 0;
-          margin: 5px 0; }
-      .card-list-section .lists-container .cards-box ul li {
-        background-size: 122% auto !important;
-        background-position: 50% 28% !important;
-        border-bottom: 1px solid #999; }
-        .card-list-section .lists-container .cards-box ul li .noise {
-          background: url("../images/noise2.png");
-          width: 100%; }
-          .card-list-section .lists-container .cards-box ul li .noise a {
-            font-family: Mont;
-            font-size: 14px;
-            position: relative;
-            padding-left: 10px;
-            color: white;
-            text-decoration: none;
-            text-shadow: 2px 2px black;
-            line-height: 27px; }
-            .card-list-section .lists-container .cards-box ul li .noise a:hover {
-              color: #999;
-              text-shadow: 2px 2px #333; }
-          .card-list-section .lists-container .cards-box ul li .noise .btn-plus {
-            padding: 3px 5px 5px;
-            float: right; }
-  .card-list-section .lists-container .graph-container {
-    width: 400px;
-    height: 400px;
-    background-color: pink;
-    margin-left: 50px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around; }
-    .card-list-section .lists-container .graph-container .tower {
-      width: 20px;
-      height: 10px;
-      max-height: 390px;
-      background-color: grey;
-      -webkit-align-self: flex-end;
-          -ms-flex-item-align: end;
-              align-self: flex-end;
-      -webkit-transition: all 0.5s ease-in-out;
-              transition: all 0.5s ease-in-out; }
-      .card-list-section .lists-container .graph-container .tower.bigger {
-        height: 200px; }
-  .card-list-section .lists-container .added-cards-table {
-    width: 400px;
-    height: 400px;
-    background-color: lightblue;
-    margin-left: 50px; }
-    .card-list-section .lists-container .added-cards-table tr .td-name {
-      width: 200px; }
+        border-bottom: 1px solid #6b2f17;
+        border-top: 1px solid #6b2f17;
+        background: url(../images/wood-dark.png); }
+      .home-page .cards-belt-left .category-box .category-ul-box ul, .home-page .cards-belt-right .category-box .category-ul-box ul, .detail-section .cards-belt-left .category-box .category-ul-box ul, .detail-section .cards-belt-right .category-box .category-ul-box ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0; }
+        .home-page .cards-belt-left .category-box .category-ul-box ul li, .home-page .cards-belt-right .category-box .category-ul-box ul li, .detail-section .cards-belt-left .category-box .category-ul-box ul li, .detail-section .cards-belt-right .category-box .category-ul-box ul li {
+          background-color: grey;
+          background-size: 122% auto !important;
+          background-position: 50% 28% !important; }
+          .home-page .cards-belt-left .category-box .category-ul-box ul li .noise, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise {
+            background: url(../images/noise2.png);
+            width: 100%; }
+            .home-page .cards-belt-left .category-box .category-ul-box ul li .noise a, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise a, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise a, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise a {
+              padding-left: 20px;
+              text-decoration: none;
+              font-family: Mont;
+              font-size: 12px;
+              color: white;
+              text-shadow: 2px 2px #000;
+              line-height: 2.3em;
+              -webkit-transition: all 0.3s ease-in-out;
+                      transition: all 0.3s ease-in-out; }
+              .home-page .cards-belt-left .category-box .category-ul-box ul li .noise a:hover, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise a:hover, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise a:hover, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise a:hover {
+                font-family: Mont;
+                color: yellow;
+                text-shadow: 1px 1px #999; }
+            .home-page .cards-belt-left .category-box .category-ul-box ul li .noise .btn-plus, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise .btn-plus, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise .btn-plus, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise .btn-plus {
+              padding: 5px;
+              float: right; }
+  .home-page .page-wrapper, .detail-section .page-wrapper {
+    width: 70%;
+    height: 100vh; }
+    .home-page .page-wrapper .logo, .detail-section .page-wrapper .logo {
+      display: block;
+      width: 357px;
+      height: 140px;
+      background: url("../images/logo.png") center center;
+      background-size: cover;
+      margin: 20px auto 50px; }
 
 .detail-section .frame {
   display: -webkit-box;

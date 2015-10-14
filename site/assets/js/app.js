@@ -27,6 +27,19 @@
 	    };
 	  }
 	);
+	app.filter('replaceDolar', function() {
+	    return function(text) {
+	      return  text ? String(text).replace("$", '') : '';
+	    };
+	  }
+	);
+
+	app.filter('fillEmpty', function() {
+	    return function(text) {
+	    	 return  text ? String(text) : '-';
+	    }
+	  }
+	);
 
 	// Directives
 	var cardDirectives = angular.module('cardDirectives', ['CardsControllers'])

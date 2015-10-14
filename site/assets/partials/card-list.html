@@ -35,125 +35,92 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="logo"></div>
-<section class="card-list-section">
-
-	<div class="lists-container">
-		<div class="cards-box">
-			
-			<ul>
-				<h2 class="box-h2" id="basic">Basic cards</h2>
-				<li ng-repeat="card in cards.Basic | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}} </a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>	
-					
-				</li>
-				<h2 class="box-h2 middle-h2" id="classic">Classic cards</h2>
-				<li ng-repeat="card in cards.Classic | filter: query" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</li>
-				<h2 class="box-h2 middle-h2" id="gvg">GvG</h2>
-				<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</li>
-				<h2 class="box-h2 middle-h2" id="blackrock">Blackrock Mountain</h2>
-				<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</li>
-				<h2 class="box-h2 middle-h2" id="naxxramas">Naxxramas</h2>
-				<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</li>
-				<h2 class="box-h2 middle-h2" id="tgt">The Grand Tournament</h2>
-				<li ng-repeat="card in cards[ 'The Grand Tournament' ]  | filter: query | orderBy: order" style="background:url({{card.img}});">
-					<div class="noise">
-						<a href="#/cards/{{card.name}}">{{card.name}}</a>
-						<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
-					</div>
-				</li>										
-			</ul>
+<section class="home-page">
+	<div class="cards-belt-left">
+		<div class="category-box">
+			<h4 class="category-title">Basic</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Basic | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
-
-		<div tower  get-zero="{{numberOf0}}" 
-					get-one="{{numberOf1}}"
-					get-two="{{numberOf2}}"
-					get-three="{{numberOf3}}"
-					get-four="{{numberOf4}}"
-					get-five="{{numberOf5}}"
-					get-six="{{numberOf6}}"
-					get-seven="{{numberOf7}}"
-					get-eight="{{numberOf8}}"
-					get-nine="{{numberOf9}}"
-
-				    class="graph-container">
-
-			<div class="tower">{{numberOf0}}</div>
-			<div class="tower">{{numberOf1}}</div>
-			<div class="tower">{{numberOf2}}</div>
-			<div class="tower">{{numberOf3}}</div>
-			<div class="tower">{{numberOf4}}</div>
-			<div class="tower">{{numberOf5}}</div>
-			<div class="tower">{{numberOf6}}</div>
-			<div class="tower">{{numberOf7}}</div>
-			<div class="tower">{{numberOf8}}</div>
-			<div class="tower">{{numberOf9}}</div>
-			
+		<div class="category-box">
+			<h4 class="category-title">Classic</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Classic | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
-
-		<div class="added-cards-table">
-			<table class="table table-bordered table-hover">
-				<tbody>
-					<tr>
-						<th>Lp.</th>
-						<th>Name</th>
-						<th>Attack</th>
-						<th>Health</th>
-						<th>Cost</th>
-					</tr>
-					<tr>
-						<td>
-							<ul class="list-unstyled">
-								<li ng-repeat="lp in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] ">{{lp}}</li>
-							</ul>
-						</td>
-						<td class="td-name">
-							<ul class="list-unstyled">
-								<li ng-repeat="name in arrayOfNames track by $index"><a href="#/cards/{{name}}">{{name}}</a></li>
-							</ul>
-						</td>
-						<td class="td-attack">
-							<ul class="list-unstyled">
-								<li ng-repeat="attack in arrayOfAttack track by $index">{{attack}}</li>
-							</ul>
-						</td>
-						<td class="td-health">
-							<ul class="list-unstyled">
-								<li ng-repeat="health in arrayOfHealth track by $index">{{health}}</li>
-							</ul>
-						</td>
-						<td class="td-cost">
-							<ul class="list-unstyled">
-								<li ng-repeat="cost in arrayOfCost track by $index">{{cost}}</li>
-							</ul>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="category-box">
+			<h4 class="category-title">GvG</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	
+
+	<div class="page-wrapper">
+		<div class="logo"></div>
+	</div>
+
+	<div class="cards-belt-right">
+		<div class="category-box">
+			<h4 class="category-title">Blackrock Mountain</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">Naxxramas</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">The Grand Tournament</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'The Grand Tournament' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							<button class="btn btn-info btn-plus" ng-click="addToList(card)"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
 </section>

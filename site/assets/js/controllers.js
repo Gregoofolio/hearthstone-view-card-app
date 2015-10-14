@@ -5,7 +5,6 @@
 		
 		$scope.order = "name";
 
-
 		// 1. Getting data from api (with promise function below)
 		var onCardsComplete = function(response){
 			$scope.cards = response.data;
@@ -13,10 +12,7 @@
 		
 		getData.getApi().then(onCardsComplete);
 		// 1. END
-			
-
-
-				
+					
 		//2. Counting in list of added cards (arrayOfCost) how may times each cost appears
 			// vars
 		$scope.totalCardCost = 0;
@@ -35,7 +31,6 @@
 		$scope.numberOf8 = 0;
 		$scope.numberOf9 = 0;
 
-
 		//on plus-button click get card from ng-repeat and send its data via function addToList.
 		$scope.addToList = function(card) {
 
@@ -48,7 +43,7 @@
 					}
 				}
 				return count;
-			}
+			};
 
 			$scope.cost = card.cost;
 			$scope.attack = card.attack;
@@ -64,7 +59,7 @@
 				$scope.arrayOfCost.push($scope.cost);
 				console.log("Total cost: " + $scope.totalCardCost);
 				console.log("Array of costs: "+ $scope.arrayOfCost);
-			}
+			};
 			$scope.numberOf0 = countInArray($scope.arrayOfCost, 0);
 			$scope.numberOf1 = countInArray($scope.arrayOfCost, 1);
 			$scope.numberOf2 = countInArray($scope.arrayOfCost, 2);
@@ -92,31 +87,20 @@
 			$scope.arrayOfNames.push($scope.cardName);
 
 		}
-
-
-		// In this stage I have Arrays of names,health,attack and cost each card which was clicked. 
+		// In this stage I have Arrays of names, health, attack and cost each card which was clicked. 
 		//2. END
 
 		//3. Invoge metchod getRandomName from factory "randomCardDetail" with argument $scope.cards (data from api);
 		$scope.getRandomName = function(){
 				return $scope.randomName = randomCardDetail.getRandomName($scope.cards);
 		}
-		
-
 	}])
-
-
-
-
-
 	.controller("DetailController", ["$scope","getData", function ($scope, getData ){
 
 		var onDetailComplete = function(response){
 			$scope.details = response.data;
 		};
-
 		getData.getApiDetail().then(onDetailComplete);
 	}]);
-	
-	
+
 // Controllers END

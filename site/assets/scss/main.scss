@@ -67,24 +67,16 @@ body{
 	.basic-page{
 		background: url("../images/bg.jpg") center center;
 		background-size: 100% auto;
-		
 		padding-bottom: 200px;
 		min-height:100vh;
 		position: relative;
-		.logo{
-			display: block;
-			width:506px;
-			height: 198px;
-			background: url("../images/logo.png") center center;
-			background-size: cover;
-			margin:0 auto 50px;
-		}
 	}
 }
 nav{
 	height:55px;
 	background-color: #E7AB17 !important;
 	border-bottom:1px solid $brown !important;
+	margin-bottom:0 !important;
 	.navbar-header{
 		.logo-brand{
 			padding:5px;
@@ -129,132 +121,228 @@ nav{
 }
 
 
-
-.card-list-section{
-	.lists-container{
-		margin-left: 50px;
-		display: flex;
-		flex-direction: row;
+.home-page, .detail-section{
+	display:flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	height:100%;
+	.cards-belt-left,.cards-belt-right{
+		width:15%;
+		height: 90%;
+		background-color: #eaeaea;
+		border-left: 1px solid $brown;
 		
-		position: relative;
+		.category-box{
+			overflow-y:scroll;
+			height:33.4%;
+			border-bottom: 1px solid white;
+			background: url(../images/wood.png);
+			&:last-child{
+				border-bottom: none;
+			}
+			.category-title{
 
-		.cards-box{
-			position: relative;
-			width:250px;
+				font:{
+					family:MerrB;
+					size:1em;
+				}
+				color:$blue;
+				text-align: center;
+				text-transform: uppercase;
+				background-color: red;
+				line-height: 2em;
+				margin: 0;
+				border-bottom: 1px solid $brown;
+				border-top: 1px solid $brown;
+				background:url(../images/wood-dark.png) ;
+			}
+			.category-ul-box{
+				ul{
+					list-style-type: none;
+					padding-left: 0;
+					margin-bottom: 0;
+					li{ background-color: grey;
+						background-size: 122% auto !important;
+						background-position: 50% 28% !important;
+						.noise{
+							background: url(../images/noise2.png);
+							width:100%;
+							a{
+								padding-left: 20px;
+								text-decoration: none;
+								font:{
+									family:Mont;
+									size:12px;
+								}
+								color:white;
+								text-shadow: 2px 2px #000;
+								line-height: 2.3em;
+								transition: all 0.3s ease-in-out;
+								&:hover{
+									font:{
+										family: Mont;
+									}
+									color: yellow;
+									text-shadow: 1px 1px #999;
+								}
+
+
+
+							}
+							.btn-plus{
+								padding: 5px;
+								float:right;
+							}
+						}
+						
+					}
+				}
+
+			}
+		}
+
+	}
+	.page-wrapper{
+		width:70%;
+		height: 100vh;
+		.logo{
 			display: block;
-			border-radius: 20px 0 0 20px;
-			border: 2px solid #333;
-			overflow-y: scroll;
-			background: url("../images/wood.png") center center;
+			width:357px;
+			height: 140px;
+			background: url("../images/logo.png") center center;
 			background-size: cover;
-			max-height:400px;
-			overflow-x: hidden;
-
-
-			ul{	
-				list-style-type: none;
-				padding-left:0;
-				
-				.box-h2{
-					display: block;
-					width:233px;
-					text-align: center;
-					font:{
-						familt:MontSB;
-						size:20px;
-					}
-					color: $blue;
-					line-height: 40px;
-					margin: 0;
-					border-top-left-radius:20px;
-					border-bottom:2px solid $brown;
-					background: url("../images/wood-dark.png") center center;
-					background-size: 100% auto;
-					&.middle-h2{
-						border-top:2px solid $brown;
-						border-top-left-radius:0;
-						margin: 5px 0;
-					}
-
-				}
-				
-				li{ 
-					background-size: 122% auto !important;
-					background-position: 50% 28% !important;
-					
-					border-bottom:1px solid #999;
-					.noise{
-						background: url("../images/noise2.png");
-						width:100%;
-						a{	
-							font:{
-								family:Mont;
-								size:14px;
-							}
-							position: relative;
-							padding-left: 10px;
-							color: white;
-							text-decoration: none;
-							text-shadow: 2px 2px black;
-							line-height: 27px;
-
-							&:hover{
-								color: #999;
-								text-shadow: 2px 2px #333;
-							}
-							
-
-						}
-						.btn-plus{
-							padding:3px 5px 5px;
-							float:right;
-						}
-					}
-
-					
-				}
-			}
-		}
-		.graph-container{
-			width:400px;
-			height: 400px;
-			background-color: pink;
-			margin-left: 50px;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			
-
-			.tower{
-				width:20px;
-				height: 10px;
-				max-height:390px;
-				background-color: grey;
-				align-self: flex-end;
-				transition: all 0.5s ease-in-out;
-
-
-				&.bigger{
-					height: 200px;
-				}
-			}
-		}
-		.added-cards-table{
-			width:400px;
-			height: 400px;
-			background-color: lightblue;
-			margin-left: 50px;
-			tr{
-				.td-name{
-					width:200px;
-				}	
-			}
-
-
+			margin:20px auto 50px;
 		}
 	}
-
 }
+
+
+// .card-list-section{
+// 	.lists-container{
+// 		margin-left: 50px;
+// 		display: flex;
+// 		flex-direction: row;
+		
+// 		position: relative;
+
+// 		.cards-box{
+// 			position: relative;
+// 			width:250px;
+// 			display: block;
+// 			border-radius: 20px 0 0 20px;
+// 			border: 2px solid #333;
+// 			overflow-y: scroll;
+// 			background: url("../images/wood.png") center center;
+// 			background-size: cover;
+// 			max-height:400px;
+// 			overflow-x: hidden;
+
+
+// 			ul{	
+// 				list-style-type: none;
+// 				padding-left:0;
+				
+// 				.box-h2{
+// 					display: block;
+// 					width:233px;
+// 					text-align: center;
+// 					font:{
+// 						familt:MontSB;
+// 						size:20px;
+// 					}
+// 					color: $blue;
+// 					line-height: 40px;
+// 					margin: 0;
+// 					border-top-left-radius:20px;
+// 					border-bottom:2px solid $brown;
+// 					background: url("../images/wood-dark.png") center center;
+// 					background-size: 100% auto;
+// 					&.middle-h2{
+// 						border-top:2px solid $brown;
+// 						border-top-left-radius:0;
+// 						margin: 5px 0;
+// 					}
+
+// 				}
+				
+// 				li{ 
+// 					background-size: 122% auto !important;
+// 					background-position: 50% 28% !important;
+					
+// 					border-bottom:1px solid #999;
+// 					.noise{
+// 						background: url("../images/noise2.png");
+// 						width:100%;
+// 						a{	
+// 							font:{
+// 								family:Mont;
+// 								size:14px;
+// 							}
+// 							position: relative;
+// 							padding-left: 10px;
+// 							color: white;
+// 							text-decoration: none;
+// 							text-shadow: 2px 2px black;
+// 							line-height: 27px;
+
+// 							&:hover{
+// 								color: #999;
+// 								text-shadow: 2px 2px #333;
+// 							}
+							
+
+// 						}
+// 						.btn-plus{
+// 							padding:3px 5px 5px;
+// 							float:right;
+// 						}
+// 					}
+
+					
+// 				}
+// 			}
+// 		}
+// 		.graph-container{
+// 			width:400px;
+// 			height: 400px;
+// 			background-color: pink;
+// 			margin-left: 50px;
+// 			display: flex;
+// 			flex-direction: row;
+// 			justify-content: space-around;
+			
+
+// 			.tower{
+// 				width:20px;
+// 				height: 10px;
+// 				max-height:390px;
+// 				background-color: grey;
+// 				align-self: flex-end;
+// 				transition: all 0.5s ease-in-out;
+
+
+// 				&.bigger{
+// 					height: 200px;
+// 				}
+// 			}
+// 		}
+// 		.added-cards-table{
+// 			width:400px;
+// 			height: 400px;
+// 			background-color: lightblue;
+// 			margin-left: 50px;
+// 			tr{
+// 				.td-name{
+// 					width:200px;
+// 				}	
+// 			}
+
+
+// 		}
+// 	}
+
+// }
 
 
 

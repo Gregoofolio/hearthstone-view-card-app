@@ -17,6 +17,18 @@
         <li><a href="#/">Home</a></li>
         <li><a href="#/cards/{{randomName}}" ng-click="getRandomName()">See Random Card</a></li>
       </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search for card" ng-model="query.name">
+        </div>
+      </form>
+      <label class="nav-label">Order by:</label>
+        <select select-bts ng-model="order">
+          <option value="name">Name</option>
+		  <option value="cost">Cost</option>
+		  <option value="attack">Attack</option>
+		  <option value="health">Health</option>
+		</select>
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
@@ -26,7 +38,51 @@
 </nav>
 <div class="logo"></div>
 <section class="detail-section">
-	<div class="frame">
+	<div class="cards-belt-left">
+		<div class="category-box">
+			<h4 class="category-title">Basic</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Basic | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+						
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">Classic</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Classic | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">GvG</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'Goblins vs Gnomes' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-wrapper">
+		<div class="logo"></div>
+		<div class="frame">
 		<div class="column-image">
 			<img ng-src="{{details[0].img}}" alt="">
 		</div>
@@ -35,37 +91,79 @@
 				<p>Name: <span>{{details[0].name}}</span></p>
 			</div>
 			<div class="col col-1">
-				<p class="detail">ID: <span>{{details[0].cardId}}</span></p>
-				<p class="detail">Name: <span>{{details[0].name}}</span></p>
-				<p class="detail">Card Set: <span>{{details[0].cardSet}}</span></p>
-				<p class="detail">Type: <span>{{details[0].type}}</span></p>
-				<p class="detail">Fraction: <span>{{details[0].faction}}</span></p>
-				<p class="detail">Rarity: <span>{{details[0].rarity}}</span></p>
+				<p class="detail">ID: <span>{{details[0].cardId | fillEmpty}}</span></p>
+				<p class="detail">Name: <span>{{details[0].name | fillEmpty}}</span></p>
+				<p class="detail">Card Set: <span>{{details[0].cardSet | fillEmpty}}</span></p>
+				<p class="detail">Type: <span>{{details[0].type | fillEmpty}}</span></p>
+				<p class="detail">Fraction: <span fill-empty >{{details[0].faction | fillEmpty}}</span></p>
+				<p class="detail">Rarity: <span>{{details[0].rarity | fillEmpty}}</span></p>
 				<p class="detail">Cost: 
-					<span class="icon icon-cost"><span class="icon-quantity">{{details[0].cost}}</span></span>
+					<span class="icon icon-cost"><span class="icon-quantity">{{details[0].cost }}</span></span>
 				</p>
 				<p class="detail">Attack: 
-					<span class="icon icon-attack"><span class="icon-quantity">{{details[0].attack}}</span></span>
+					<span class="icon icon-attack"><span class="icon-quantity">{{details[0].attack }}</span></span>
 				</p>
 				<p class="detail">Health: 
-					<span class="icon icon-health"><span class="icon-quantity">{{details[0].health}}</span>
+					<span class="icon icon-health"><span class="icon-quantity">{{details[0].health }}</span>
 				</p>
-				<p class="detail">Race: <span>{{details[0].race}}</span></p>
+				<p class="detail">Race: <span>{{details[0].race | fillEmpty}}</span></p>
 			</div>
 			<div class="col col-2">
 				<p class="detail detail-list">Additional mechanics:</p>
 				<ul class="detail-ul">
 					<li ng-repeat="mech in details[0].mechanics">
-						{{mech.name}}
+						{{mech.name | fillEmpty}}
 					</li>
 				</ul>
-				<p class="detail">Card for special class: <span>{{details[0].playerClass}}</span></p>
-				<p class="detail">Card text: <span>{{details[0].text | htmlToPlaintext}}</span></p>
-				<p class="detail">Desc: <span>{{details[0].flavor}}</span></p>
-				<p class="detail">Artist: <span>{{details[0].artist}}</span></p>
+				<p class="detail">Card for special class: <span>{{details[0].playerClass | fillEmpty}}</span></p>
+				<p class="detail">Card text: <span>{{details[0].text | htmlToPlaintext | fillEmpty | replaceDolar}}</span></p>
+				<p class="detail">Desc: <span>{{details[0].flavor | htmlToPlaintext | fillEmpty | replaceDolar}}</span></p>
+				<p class="detail">Artist: <span>{{details[0].artist | fillEmpty}}</span></p>
 			</div>
 			
 		</div>
+	</div> 
 	</div>
 
+	<div class="cards-belt-right">
+		<div class="category-box">
+			<h4 class="category-title">Blackrock Mountain</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'Blackrock Mountain' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">Naxxramas</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards.Naxxramas | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="category-box">
+			<h4 class="category-title">The Grand Tournament</h4>
+			<div class="category-ul-box">
+				<ul>
+					<li ng-repeat="card in cards[ 'The Grand Tournament' ] | filter: query | orderBy: order" style="background:url({{card.img}});">
+						<div class="noise">
+							<a href="#/cards/{{card.name}}">{{card.name}} </a>
+							
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+	</div>
 </section>
