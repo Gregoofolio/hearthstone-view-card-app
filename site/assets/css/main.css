@@ -415,12 +415,10 @@ th {
 body .basic-page {
   background: url("../images/bg.jpg") center center;
   background-size: 100% auto;
-  padding-bottom: 200px;
   min-height: 100vh;
   position: relative; }
 
 nav {
-  height: 55px;
   background-color: #E7AB17 !important;
   border-bottom: 1px solid #6b2f17 !important;
   margin-bottom: 0 !important; }
@@ -438,6 +436,14 @@ nav {
     color: #333 !important; }
     nav .navbar-nav a:hover {
       color: #265a6d !important; }
+  nav .navbar-right {
+    margin-bottom: 0; }
+    @media screen and (max-width: 1020px) {
+      nav .navbar-right {
+        float: left !important;
+        padding-bottom: 10px; } }
+    nav .navbar-right li a {
+      line-height: 16px; }
   nav .form-control {
     margin-top: 2px; }
   nav .nav-label {
@@ -445,8 +451,8 @@ nav {
     font-size: 18px;
     color: #333;
     line-height: 50px;
-    margin-left: 20px;
-    margin-right: 10px; }
+    float: left;
+    margin: 0 10px 0 0; }
   nav .bootstrap-select {
     margin-top: -4px; }
 
@@ -455,25 +461,77 @@ nav {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 0;
   margin: 0;
-  height: 100%; }
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  @media screen and (max-width: 1020px) {
+    .home-page, .detail-section {
+      -webkit-flex-flow: column wrap;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap; } }
   .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
     width: 15%;
-    height: 96%;
+    height: 100%;
     background-color: #eaeaea;
-    border-left: 1px solid #6b2f17; }
+    border-left: 1px solid #6b2f17;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media screen and (max-width: 1370px) {
+      .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
+        width: 20%; } }
+    @media screen and (max-width: 1020px) {
+      .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+    @media screen and (max-width: 992px) {
+      .home-page .cards-belt-left, .home-page .cards-belt-right, .detail-section .cards-belt-left, .detail-section .cards-belt-right {
+        -webkit-box-ordinal-group: 5;
+        -webkit-order: 4;
+            -ms-flex-order: 4;
+                order: 4;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .home-page .cards-belt-left .category-box, .home-page .cards-belt-right .category-box, .detail-section .cards-belt-left .category-box, .detail-section .cards-belt-right .category-box {
       overflow-y: scroll;
-      height: 33.4%;
+      height: 300px;
       border-bottom: 1px solid white;
       background: url(../images/wood.png); }
+      @media screen and (max-width: 1020px) {
+        .home-page .cards-belt-left .category-box, .home-page .cards-belt-right .category-box, .detail-section .cards-belt-left .category-box, .detail-section .cards-belt-right .category-box {
+          width: 34%;
+          height: 150px; } }
+      @media screen and (max-width: 992px) {
+        .home-page .cards-belt-left .category-box, .home-page .cards-belt-right .category-box, .detail-section .cards-belt-left .category-box, .detail-section .cards-belt-right .category-box {
+          width: 100%; } }
       .home-page .cards-belt-left .category-box:last-child, .home-page .cards-belt-right .category-box:last-child, .detail-section .cards-belt-left .category-box:last-child, .detail-section .cards-belt-right .category-box:last-child {
-        border-bottom: none; }
+        border-bottom: 1px solid #6b2f17; }
       .home-page .cards-belt-left .category-box .category-title, .home-page .cards-belt-right .category-box .category-title, .detail-section .cards-belt-left .category-box .category-title, .detail-section .cards-belt-right .category-box .category-title {
         font-family: MerrB;
         font-size: 1em;
@@ -507,6 +565,9 @@ nav {
               line-height: 2.3em;
               -webkit-transition: all 0.3s ease-in-out;
                       transition: all 0.3s ease-in-out; }
+              @media screen and (max-width: 1446px) {
+                .home-page .cards-belt-left .category-box .category-ul-box ul li .noise a, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise a, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise a, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise a {
+                  padding-left: 5px; } }
               .home-page .cards-belt-left .category-box .category-ul-box ul li .noise a:hover, .home-page .cards-belt-right .category-box .category-ul-box ul li .noise a:hover, .detail-section .cards-belt-left .category-box .category-ul-box ul li .noise a:hover, .detail-section .cards-belt-right .category-box .category-ul-box ul li .noise a:hover {
                 font-family: Mont;
                 color: yellow;
@@ -515,8 +576,20 @@ nav {
               padding: 5px;
               float: right; }
   .home-page .page-wrapper, .detail-section .page-wrapper {
-    width: 70%;
-    height: 100vh; }
+    width: 70%; }
+    @media screen and (max-width: 1370px) {
+      .home-page .page-wrapper, .detail-section .page-wrapper {
+        width: 60%; } }
+    @media screen and (max-width: 1020px) {
+      .home-page .page-wrapper, .detail-section .page-wrapper {
+        width: 100%;
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+            -ms-flex-order: 3;
+                order: 3;
+        -webkit-align-self: flex-end;
+            -ms-flex-item-align: end;
+                align-self: flex-end; } }
     .home-page .page-wrapper .logo, .detail-section .page-wrapper .logo {
       display: block;
       width: 357px;
@@ -543,7 +616,7 @@ nav {
           font-size: 3em;
           color: white; }
           .home-page .page-wrapper .main-container .content-wrapper .content-title span, .detail-section .page-wrapper .main-container .content-wrapper .content-title span {
-            color: #265a6d; }
+            color: #89160a; }
         .home-page .page-wrapper .main-container .content-wrapper .content-text, .home-page .page-wrapper .main-container .content-wrapper .content-ul, .detail-section .page-wrapper .main-container .content-wrapper .content-text, .detail-section .page-wrapper .main-container .content-wrapper .content-ul {
           font-family: MerrB;
           font-size: 1em;
@@ -557,7 +630,7 @@ nav {
           height: 300px;
           background: url("../images/graph-bg.jpg") center center;
           background-size: cover;
-          margin: 20px auto;
+          margin: 20px auto 5;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -576,6 +649,7 @@ nav {
           padding-right: 30px; }
           .home-page .page-wrapper .main-container .content-wrapper .graph-box .tower, .detail-section .page-wrapper .main-container .content-wrapper .graph-box .tower {
             width: 15px;
+            max-height: 250px;
             height: 2px;
             background: -webkit-linear-gradient(#31B0D5, #75C3D8, #A2CEDB);
             background: linear-gradient(#31B0D5, #75C3D8, #A2CEDB);
@@ -585,6 +659,35 @@ nav {
             margin-bottom: 8px;
             -webkit-transition: all 0.5s ease-in-out;
                     transition: all 0.5s ease-in-out; }
+        .home-page .page-wrapper .main-container .content-wrapper .graph-costs, .detail-section .page-wrapper .main-container .content-wrapper .graph-costs {
+          width: 600px;
+          height: 20px;
+          margin: 0 auto;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-justify-content: space-around;
+              -ms-flex-pack: distribute;
+                  justify-content: space-around;
+          padding-left: 30px;
+          padding-right: 30px; }
+          .home-page .page-wrapper .main-container .content-wrapper .graph-costs .icon-cost, .detail-section .page-wrapper .main-container .content-wrapper .graph-costs .icon-cost {
+            width: 20px;
+            height: 20px;
+            background: url("../images/cost-small.png") center center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            font-family: MontB;
+            font-size: 12px;
+            padding-top: 2px;
+            padding-left: 1px; }
       .home-page .page-wrapper .main-container .list-wrapper, .detail-section .page-wrapper .main-container .list-wrapper {
         width: 400px;
         height: 200px; }
@@ -815,3 +918,8 @@ nav {
           font-size: 24px;
           margin-left: 40px;
           color: #265a6d; }
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #265a6d; }

@@ -54,15 +54,20 @@
 			$scope.cardName = card.name;
 
 			//adding costs to array and total value. Then invoke function countInArray for each cost
-			if (isNaN($scope.cost)){
-				alert("This card "+ "("+ $scope.cardName +")" + " does not have cost, its probably Hero");
-				$scope.arrayOfCost.push('-');
-			} else {
-				$scope.totalCardCost += $scope.cost;
-				$scope.arrayOfCost.push($scope.cost);
-				console.log("Total cost: " + $scope.totalCardCost);
-				console.log("Array of costs: "+ $scope.arrayOfCost);
-			};
+			if($scope.arrayOfCost.length === 30){
+				return $scope.arrayOfCost;
+			}else{
+				if (isNaN($scope.cost)){
+					alert("This card "+ "("+ $scope.cardName +")" + " does not have cost, its probably Hero");
+					$scope.arrayOfCost.push('-');
+				} else {
+					$scope.totalCardCost += $scope.cost;
+					$scope.arrayOfCost.push($scope.cost);
+					console.log("Total cost: " + $scope.totalCardCost);
+					console.log("Array of costs: "+ $scope.arrayOfCost);
+				};
+			}
+
 			$scope.numberOf0 = countInArray($scope.arrayOfCost, 0);
 			$scope.numberOf1 = countInArray($scope.arrayOfCost, 1);
 			$scope.numberOf2 = countInArray($scope.arrayOfCost, 2);
